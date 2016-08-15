@@ -1,5 +1,5 @@
 global.DATABASE_URL = 'mongodb://localhost/shopping-list-test';
-//global.DATABASE_URL = 'mongodb://wangmeng255:SoundwaveLi00@ds139985.mlab.com:39985/mongo_data/shopping-list-dev';
+//global.DATABASE_URL = 'mongodb://<wangmeng255>:<SoundwaveLi00>@ds139985.mlab.com:39985/mongo_data/shopping-list-dev';
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
@@ -28,6 +28,7 @@ describe('Shopping List', function() {
             .get('/items')
             .end(function(err, res) {
                 should.equal(err, null);
+                console.log(res.body);
                 res.should.have.status(200);
                 res.should.be.json;
                 res.body.should.be.a('array');
