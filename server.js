@@ -1,5 +1,3 @@
-//global.DATABASE_URL = 'mongodb://<wangmeng255>:<SoundwaveLi00>@ds139985.mlab.com:39985/mongo_data/shopping-list';
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
