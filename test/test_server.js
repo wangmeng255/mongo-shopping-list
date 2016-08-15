@@ -1,5 +1,5 @@
-//global.DATABASE_URL = 'mongodb://localhost/shopping-list-test';
-global.DATABASE_URL = 'mongodb://wangmeng255:SoundwaveLi00@ds139985.mlab.com:39985/mongo_data/shopping-list-dev';
+global.DATABASE_URL = 'mongodb://localhost/shopping-list-test';
+//global.DATABASE_URL = 'mongodb://wangmeng255:SoundwaveLi00@ds139985.mlab.com:39985/mongo_data/shopping-list-dev';
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
@@ -37,7 +37,6 @@ describe('Shopping List', function() {
                 res.body[0].should.have.property('name');
                 res.body[0]._id.should.be.a('string');
                 first_id = res.body[0]._id;
-                console.log(res.body);
                 res.body[0].name.should.be.a('string');
                 res.body[0].name.should.equal('Broad beans');
                 res.body[1].name.should.equal('Tomatoes');
