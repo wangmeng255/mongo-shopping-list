@@ -72,6 +72,7 @@ app.use('*', function(req, res) {
 });
 
 var runServer = function(callback) {
+    
     mongoose.connect(config.DATABASE_URL, function(err) {
         if(err && callback) {
             return callback(err);
