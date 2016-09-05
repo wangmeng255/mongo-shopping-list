@@ -1,0 +1,17 @@
+language: node_js
+node_js: node
+services:
+- mongodb
+addons:
+  apt:
+    sources:
+    - mongodb-3.2-precise
+    packages:
+    - mongodb-org-server
+deploy:
+  provider: heroku
+  api_key:
+    secure: T9xNeky/7DchgSZizGJxvv35KhidWewjNweLen8Inoj2J7rbzsI2Zr2DVmQ39u/WMh4s3m5a8bX2pB0XVPxx9oKPc4PZDxRwVLDieL9Tuo/ISrMx3+eBuJQVFx/eCtS/f8H0MN3gaHAXIKyOeTGnTkRmL0eBy7nUxtZ0r9dHYYvd5UscogNn3VLN5AeW/+S5wAtceMI1/uZjfRGCJNPg20f9mc5CBU/1MDDpgtuQJGDlo1OJhSw8/W3c5joYEU86Am8Jc1FMNTmY2DtdEsuKcaagnq5ysyb7akurBzJbHPxwkK1Ky+1uIQMUQ1L38ggtGlXzmwSodTonhmfDZlRMibd/7qGFQ3D6jWT2xyrVE2gpHHvl2MVpLla1G6AhVevwoJhJaJDJq+JpmHd2RBeCOEAihEli46cFcpbzjAqt2PHlbW2aeSBpULobPNSz0ADPVbV1eoCilY6KMYWCayFbOpgk7+lzS7d76XARxhsNmX2pDV4In8GNH6BNfzeGnPtF0U6rbpW4ItZbU+GE1iNy7kAeeMvWyVHEQbM5JkkERcWelY+pDxZEJ1zD05933bbPI8cPkdDsbOe5ZuoD8JLfhleq9wBLn9G4gZL22yo3gKddC/hlcEeeQzOyhRjgKGqg15EzNtRs5FHxCDyHdwxbNl/8LXgH8jh1NeP6dkHTwt4=
+  app: stormy-citadel-72454
+  on:
+    repo: wangmeng255/mongo-shopping-list
